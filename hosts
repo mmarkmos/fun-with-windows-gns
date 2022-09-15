@@ -1,0 +1,10 @@
+[win]
+192.168.178.112
+
+[win:vars]
+ansible_user=junioradmin
+ansible_password=junioradmin
+ansible_shell_type=cmd
+ansible_become_method=runas
+ansible_become_user=junioradmin
+

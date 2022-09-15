@@ -1,0 +1,13 @@
+---
+- hosts: win
+  tasks:
+    - name: Firewall rule to block GNS
+      community.windows.win_firewall_rule:
+        name: GNS
+        localport: 80
+        action: block
+        direction: in
+        protocol: tcp
+        state: present
+        enabled: yes
+
