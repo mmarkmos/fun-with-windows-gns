@@ -1,0 +1,9 @@
+# Docs: https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_powershell_module.html
+---
+- hosts: win
+  tasks:
+    - name: Run basic PowerShell script
+      ansible.windows.win_powershell:
+        script: |
+          Get-Process | Out-File -FilePath .\Process.txt
+
